@@ -30,6 +30,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
     func webView(_ webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
+        //Stop Webview from going to unrelated pages
         if request.url?.absoluteString == "https://m.imgur.com/assets/appcache/manifest.html" || request.url?.absoluteString == "https://imgur.com/register" {
             return false
         }
@@ -39,7 +40,8 @@ class ViewController: UIViewController, UIWebViewDelegate {
         
         guard let queryItems = components.queryItems else {return true}
         for item in queryItems {
-            dict[item.name] = item.value!
+            guard let value = item.value else {return true}
+            dict[item.name] = value
             
             if item.name == "code" {
                 print("got the code to exchange for token! \(item.value!)")

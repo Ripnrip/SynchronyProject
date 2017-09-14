@@ -147,11 +147,9 @@
 		841E76721F603B3A00D2624F /* SynchronyFinancialProject */ = {
 			isa = PBXGroup;
 			children = (
+				84B1A3521F6A416E00C1D17D /* Views */,
 				84732E8D1F6A208A0013317B /* Models */,
-				84732E881F6A0FB50013317B /* Cells */,
 				841E76A11F603B6A00D2624F /* Networking */,
-				84712D991F60744A005BBE15 /* Login */,
-				84712D9A1F607452005BBE15 /* Home */,
 				841E76731F603B3A00D2624F /* AppDelegate.swift */,
 				841E76771F603B3A00D2624F /* Main.storyboard */,
 				841E767A1F603B3A00D2624F /* Assets.xcassets */,
@@ -218,6 +216,16 @@
 				84732E8E1F6A209B0013317B /* ImgurPhoto.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		84B1A3521F6A416E00C1D17D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84712D991F60744A005BBE15 /* Login */,
+				84712D9A1F607452005BBE15 /* Home */,
+				84732E881F6A0FB50013317B /* Cells */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
